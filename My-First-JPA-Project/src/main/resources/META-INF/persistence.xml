@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+
+    <!-- Change the name attribute if you want a different persistence unit name -->
+    <persistence-unit name="himanshuUnit" transaction-type="RESOURCE_LOCAL">
+        <!-- Modify this description to match your project -->
+        <description>Persistence unit Understanding CRUD operation </description>
+
+        <!-- If you're using a different JPA provider, change this -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- List all your entity classes here. Add or remove as needed. -->
+        <class>org.example.Truck</class>
+        <!-- <class>org.example.AnotherEntity</class> -->
+
+        <properties>
+            <!-- Database connection settings -->
+            <!-- Change the driver, URL, username, and password to match your database -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hibernatejpa"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="@#IFeelLikeKing22"/>
+
+            <!-- Hibernate specific properties -->
+            <!-- Change the dialect if you're using a different database -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <!-- Options for hbm2ddl.auto: create, update, validate, create-drop -->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <!-- Set to false in production -->
+            <property name="hibernate.show_sql" value="true"/>  <!-- ye SQL Quries bhi dikhayenga jab Ham code ron Karenge -->
+
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+
+            <!-- Add any additional properties your application needs -->
+        </properties>
+    </persistence-unit>
+
+    <!--
+    aise </persistence-unit> ek se jyada ho sakte h
+    ,agar Application distributed Database pe run kar rahi h to kam aayenga,
+     2 database server ke liye 2 persistance unit hongi
+      -->
+</persistence>
