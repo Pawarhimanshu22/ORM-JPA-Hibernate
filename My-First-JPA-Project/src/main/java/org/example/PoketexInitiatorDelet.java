@@ -9,7 +9,7 @@ public class PoketexInitiatorDelet {
 
     public static void main(String[] args) {
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("himanshuUnit");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("himanshuUnit01");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
 

@@ -34,8 +34,21 @@ public class PoketexInitiatorCreate {
         pokemon3.setType("Cat");
         pokemon3.setColor(Color.CREAM);
 
+        Pokemon pokemon4 = new Pokemon();
+        pokemon4.setName("Venusaur");
+        pokemon4.setPower(140);
+        pokemon4.setType("Grass");
+        pokemon4.setColor(Color.GREEN);
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("himanshuUnit");
+
+        Pokemon pokemon5 = new Pokemon();
+        pokemon5.setName("Gengar");
+        pokemon5.setPower(160);
+        pokemon5.setType("Ghost");
+        pokemon5.setColor(Color.PURPLE);
+
+
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("himanshuUnit01");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
 
@@ -44,6 +57,8 @@ public class PoketexInitiatorCreate {
         entityManager.persist(pokemon1);
         entityManager.persist(pokemon2);
         entityManager.persist(pokemon3);
+        entityManager.persist(pokemon4);
+        entityManager.persist(pokemon5);
 
         entityTransaction.commit();
 

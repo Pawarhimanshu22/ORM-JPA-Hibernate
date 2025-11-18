@@ -5,12 +5,14 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class PoketexInitiatorRead {
+public class PoketexInitiatorRead
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("himanshuUnit");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("himanshuUnit01");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         Pokemon pokemon = entityManager.find(Pokemon.class, "Pikachu");

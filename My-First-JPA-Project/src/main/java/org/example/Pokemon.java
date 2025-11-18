@@ -13,7 +13,7 @@ public class Pokemon {
     @Id
     private String name ;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String type ;
 
     @Column
